@@ -1,0 +1,30 @@
+<div class="card" style="width:25rem">
+    <div class="card-body">
+        <!-- we do not need action for form, instead we use [formGroup] -->
+        <form [formGroup]='formTemplate'>
+            <!-- showing choosen image -->
+            <div class="text-center">
+                <img src="/assets/img/placeholder.png" width="350px" height="250px">
+            </div>
+            <!-- control the image for upload -->
+            <div class="form-group">
+                <label>Select file to upload</label>
+                <input type="file" class="form-control" formControlName='imageUrl'>
+            </div>
+            <div class="form-group">
+                <input class="form-control" formControlName='caption' placeholder="Caption">
+            </div>
+            <!-- for category select dropdown -->
+            <div class="form-group">
+                <select formControlName='category' class="form-control">
+                    <option value="Animal">Animal</option>
+                    <option value="Vehicle">Vehicle</option>
+                    <option value="Bird">Bird</option>
+                </select>
+            </div>
+            <div class="form-froup">
+                <button type="submit" class="btn btn-success float-right">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
