@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageService } from '../images/shared/image.service';
 
 @Component({
   selector: 'app-images',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class ImagesComponent implements OnInit {
-
-  constructor() { }
+  // injecting ImageServices inside the parent component
+  constructor(private service: ImageService) { }
 
   ngOnInit(): void {
+    this.service.getImageDetailList();
   }
 
 }
