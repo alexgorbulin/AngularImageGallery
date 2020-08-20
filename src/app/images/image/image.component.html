@@ -36,8 +36,14 @@
                     <option value="Bird">Bird</option>
                 </select>
             </div>
-            <div class="form-froup">
-                <button type="submit" class="btn btn-success float-right">Submit</button>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <!-- instead of href we use routerLink -->
+                    <a routerLink="/image/list" class="btn btn-primary btn-block float-right">Go To Gallery</a>
+                </div>
+                <div class="form-froup col-md-6">
+                    <button type="submit" class="btn btn-success btn-block float-right">Submit</button>
+                </div>
             </div>
         </form>
     </div>
